@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemaventas.controlador.ProductoController">
+    <children>
+        <TitledPane animated="false" text="producto">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="317.0" prefWidth="855.0" style="-fx-background-color: #c70039;">
+                    <children>
+                        <Label layoutX="64.0" layoutY="50.0" prefHeight="17.0" prefWidth="103.0" text="CÓDIGO" textFill="#ffc300">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                        <Label layoutX="64.0" layoutY="86.0" prefHeight="17.0" prefWidth="103.0" text="NOMBRE" textFill="#ffc300">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                        <Label layoutX="64.0" layoutY="123.0" prefHeight="17.0" prefWidth="103.0" text="DESCRIPCIÓN" textFill="#ffc300">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="codigoText" layoutX="188.0" layoutY="46.0" promptText="escriba el codigo" />
+                        <TextField fx:id="nombreText" layoutX="188.0" layoutY="82.0" promptText="escriba el nombre" />
+                        <TextField fx:id="descripcionText" layoutX="189.0" layoutY="119.0" promptText="escriba la descripccion" />
+                        <Button fx:id="guardarBtn" layoutX="403.0" layoutY="23.0" mnemonicParsing="false" onAction="#onInsertarButtonClick" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #ffc300;" text="GUARDAR">
+                            <font>
+                                <Font name="Arial Black" size="12.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="403.0" layoutY="59.0" mnemonicParsing="false" onAction="#onLimpiarButtonClick" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #ffc300;" text="LIMPIAR">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                        <Button layoutX="403.0" layoutY="95.0" mnemonicParsing="false" onAction="#onSeleccionarButtonClick" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #ffc300;" text="EDITAR">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                        <Button layoutX="403.0" layoutY="132.0" mnemonicParsing="false" onAction="#eliminarButtonClick" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #ffc300;" text="ELIMINAR">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                        <ComboBox fx:id="categoriaBox" layoutX="188.0" layoutY="151.0" prefWidth="150.0" promptText="Elegir categoria" style="-fx-background-color: #ffc300;" />
+                        <Label layoutX="64.0" layoutY="155.0" prefHeight="17.0" prefWidth="103.0" text="Categoria" textFill="#ffc300">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                        <Label layoutX="64.0" layoutY="14.0" prefHeight="17.0" prefWidth="103.0" text="PRECIO" textFill="#ffc300">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="precioText" layoutX="188.0" layoutY="10.0" promptText="digite el precio" />
+                  <ImageView fitHeight="175.0" fitWidth="250.0" layoutX="579.0" layoutY="11.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@auto-1-min.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+        <TableView fx:id="tablaproductos">
+            <columns>
+                <TableColumn fx:id="colCodigoProducto" prefWidth="68.0" text="CÓDIGO" />
+                <TableColumn fx:id="colNombreProducto" prefWidth="111.0" text="NOMBRE" />
+                <TableColumn fx:id="colDescripcionProducto" prefWidth="134.0" text="DESCRIPCION" />
+                <TableColumn fx:id="colFechaCreacionProducto" prefWidth="170.0" text="FECHA CREACIÓN" />
+                <TableColumn fx:id="colCodigoCategoria" prefWidth="170.0" text="CODIGO CAT" />
+                <TableColumn fx:id="colNombreCategoria" prefWidth="203.0" text="CATEGORIA" />
+            </columns>
+        </TableView>
+        <ComboBox prefWidth="150.0" />
+    </children>
+</VBox>
